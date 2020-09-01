@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import Context from '../components/context'
+import Context from '../context/context'
 
 export const PhotoLoader = () => {
-  const context = useContext(Context)
+  const { photo } = useContext(Context)!
   return (
     <div>
-      <h3>This is context photoSrc: {context.photoSrc}</h3>
+      <h3>Photo Loader: {photo}</h3>
     </div>
   )
 }
